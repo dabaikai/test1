@@ -1,0 +1,81 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+main()
+{
+int a,b,op,os,c;
+
+printf("*********************************************\n");
+printf("             欢迎来到任务课堂\n");
+printf("*********************************************\n");
+f:printf("选择您想挑战的运算法则\n");                     //循环设置
+printf("1.加法 2.减法 3.乘法 ");                 //除法还有问题不能正常运行
+scanf("%d",&op);
+switch(op)
+{
+f1: case 1:                                              //加法循环
+srand((unsigned)time(NULL));
+a=rand()%100+1;b=rand()%100+1;
+printf("题目为：%d + %d = ?\n\n",a,b);
+
+printf("请输入你的答案\n");
+scanf("%d",&c);
+if(c==a+b)
+printf("恭喜你，答对了。\n");
+else
+printf("很遗憾，答案错误，继续加油！\n");
+printf("1.返回上一级 2.做下一题\n");
+scanf("%d",&os);
+if(os==1)
+goto f;
+else
+goto f1;
+f2:case 2:                                 //减法循环      
+a=rand()%100+1;b=rand()%100+1;
+printf("题目为：%d - %d = ?\n\n",a,b);
+printf("请输入你的答案\n");
+scanf("%d",&c);
+if(c==a-b)
+printf("恭喜你，答对了。\n");
+else
+printf("很遗憾，答案错误，继续加油！\n");
+printf("1.返回上一级 2.做下一题\n");
+scanf("%d",&os);
+if(os==1)
+goto f;
+else
+goto f2;
+f3:case 3:                                        //乘法循环
+a=rand()%10+1;b=rand()%10+1;
+printf("题目为：%d * %d = ?\n\n",a,b);
+printf("请输入你的答案\n");
+scanf("%d",&c);
+if(c==a*b)
+printf("恭喜你，答对了。\n");
+else
+printf("很遗憾，答案错误，继续加油！\n");
+printf("1.返回上一级 2.做下一题\n");
+scanf("%d",&os);
+if(os==1)
+goto f;
+else
+goto f3;
+break;
+//f4:case 4:                                    //除法循环
+//a=rand()%10+1;b=rand()%10+1;
+//printf("题目为：%d / %d = ?\n\n",a,b);
+//printf("请输入你的答案\n");
+//scanf("%d",&c);
+//if(c==a/b)
+//printf("恭喜你，答对了。\n");
+//else
+//printf("很遗憾，答案错误，继续加油！\n");
+//printf("1.返回上一级 2.做下一题\n");
+//scanf("%d",&os);
+//if(os==1)
+//goto f;
+//else
+//goto f4;
+//break;
+}
+}
